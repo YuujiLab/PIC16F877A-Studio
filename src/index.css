@@ -1,0 +1,76 @@
+:root {
+  --bg-dark: #121214;
+  --bg-panel: #1a1a1e;
+  --bg-card: #222228;
+  --bg-input: #151518;
+  --border: #33333d;
+  --fg-main: #e4e4e7;
+  --fg-muted: #8b8b99;
+  --accent-blue: #0ea5e9;
+  --accent-green: #10b981;
+  --accent-yellow: #f59e0b;
+  --accent-red: #ef4444;
+  --accent-purple: #a855f7;
+  --led-glow-green: rgba(57, 255, 20, 0.6);
+  --led-glow-red: rgba(255, 51, 68, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  background-color: var(--bg-dark);
+  color: var(--fg-main);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #141417;
+}
+::-webkit-scrollbar-thumb {
+  background: #33333d;
+  border-radius: 3px;
+}
+
+/* Horizontal scroll bar hide for mobile toolbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
